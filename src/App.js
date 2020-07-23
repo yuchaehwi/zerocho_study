@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import './App.css';
+import Ball from './Ball';
 
 function getWinnumbers(){
    const candidate = Array(45).fill().map((v,i)=>i+1);
