@@ -13,6 +13,13 @@ function getWinnumbers(){
 }
 
 class Lotto extends PureComponent {
+   state = {
+      winNumbers : getWinnumbers(),
+      winBalls : [],
+      bonus : null,
+      redo : false
+   };
+   
    render() {
       return (
          <div></div>
