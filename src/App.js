@@ -70,8 +70,17 @@ class Lotto extends PureComponent {
    }
 
    render() {
+      const { winBalls, bonus, redo } = this.state;
       return (
-         <div></div>
+         <React.Fragment>
+            <div>당첨숫자</div>
+            <div id="결과창">
+               {winBalls.map((v) => <Ball key={v} number={v} />)}
+            </div>
+            <div>보너스!</div>
+            {bonus && <Ball number={bonus} />}
+            {redo && <button onClick={this.onClickRedo}>한 번 더!</button>}
+         </React.Fragment>
       )
    }
 };
